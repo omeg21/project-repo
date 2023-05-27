@@ -5,13 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primo</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.2/dist/css/datepicker-bs4.min.css">
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
-  <link rel="stylesheet" type="text/css" href="/project-repo/static/CSS/styles.css">
+  <title>Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <style>
@@ -22,10 +16,6 @@
       padding: 1.2em;
       color: #fff;
       font-size: 80%;
-    }
-
-    .room-image {
-      width: 50%;
     }
   </style>
 </head>
@@ -67,21 +57,49 @@
       </ul>
     </div>
   </nav>
-
-  <div class="containter">
-
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-        <img src="/project-repo/static/images/generals-quarters.png" alt="room image"
-          class="img-thumbnail  mx-auto d-block room-image">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/images/pict1.jpg" class="d-block w-100" alt="waking-up">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Wake up </h5>
+          <p>Woman waking up very interesting.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/images/pict2.jpg"" class=" d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Hobby</h5>
+          <p> woman doing her hobby on bed very productive.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/images/pirct3.jpg"" class=" d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Cute couple</h5>
+          <p>2 women cuddling in bed very cute.</p>
+        </div>
       </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </button>
+  </div>
+  <div class="containter">
     <div class="row">
 
-
-
       <div class="col">
-        <h1 class="text-center mt-4">Primo</h1>
+        <h1 class="text-center mt-4">Welcome to Blood And Breakfast</h1>
         <p>Chuck's House is a very suspicious B & B run by a very suspicious man named Chuck. The yard used to have a
           noose (which the player character insisted was a bird feeder), six broken windows, two unmarked graves, and a
           (locked) metal bulkhead leading to the basement, which is also the guest room. Chuck's House is a very

@@ -7,22 +7,22 @@ import (
 	"time"
 
 	"github.com/alexedwards/scs/v2"
-	"github.com/omeg21/project-repo/pkg/config"
-	"github.com/omeg21/project-repo/pkg/controller"
-	"github.com/omeg21/project-repo/pkg/render"
+	"github.com/omeg21/project-repo/internal/config"
+	"github.com/omeg21/project-repo/internal/controller"
+	"github.com/omeg21/project-repo/internal/render"
 )
 
 const portNumber = ":8080"
 
 var app config.AppConfig
-
 var session *scs.SessionManager
 
+// main is the main function
 func main() {
-
-	// change this to true in production
+	// change this to true when in production
 	app.InProduction = false
 
+	// set up the session
 	session = scs.New()
 	session.Lifetime = 24 * time.Hour
 	session.Cookie.Persist = true
@@ -44,16 +44,15 @@ func main() {
 
 	render.NewTemplates(&app)
 
-	// http.HandleFunc("/", controller.Repo.Home)
-	// http.HandleFunc("/about", controller.Repo.About)
-	// http.HandleFunc("/new", controller.New)
-	// _ = http.ListenAndServe(portNumber, nil)
+	fmt.Println(fmt.Sprintf("Staring application on port %s", portNumber))
 
 	srv := &http.Server{
 		Addr:    portNumber,
 		Handler: routes(&app),
 	}
+
 	err = srv.ListenAndServe()
-	log.Fatal(err)
-	fmt.Println("what")
+	if err != nil {
+		log.Fatal(err)
+	}
 }
